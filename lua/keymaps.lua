@@ -1,4 +1,5 @@
 -- Keymaps
+--
 vim.keymap.set('n', '<leader>o', ':update<CR> :source<CR>')
 vim.keymap.set('n', '<C-n>', ':Oil<CR>')
 vim.keymap.set('n', '<leader>ff', vim.lsp.buf.format)

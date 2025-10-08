@@ -1,4 +1,5 @@
 -- Settings
+--
 
 vim.o.number = true
 vim.o.syntax = "on"
