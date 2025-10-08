@@ -1,6 +1,4 @@
 -- Settings
---
-
 vim.o.number = true
 vim.o.syntax = "on"
 vim.o.undofile= true
