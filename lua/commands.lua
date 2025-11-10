@@ -15,3 +15,20 @@ vim.api.nvim_create_user_command(
 	{ nargs = 0 }
 )
 
+function RunCommandByFiletype()
+  local ft = vim.bo.filetype
+
+  if ft == "python" then
+    vim.cmd("!python %")
+  elseif ft == "racket" then
+    vim.cmd("!racket %")
+  elseif ft == "go" then
+		  vim.cmd("!go run .")
+  elseif ft == "cs" then
+		  vim.cmd("!dotnet run")
+  else
+    print("No command configured for filetype: " .. ft)
+  end
+end
+
+vim.api.nvim_create_user_command("RunByFiletype", RunCommandByFiletype, {nargs = 0})
