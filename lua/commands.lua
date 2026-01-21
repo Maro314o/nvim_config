@@ -29,6 +29,8 @@ vim.api.nvim_create_user_command("RunByFiletype",
 			vim.cmd("!dotnet run")
 		elseif ft == "c" then
 			vim.cmd("!gcc %:p -o %:p:r && ./%:r && rm %:p:r")
+		elseif ft == "html" then
+			vim.cmd("!xdg-open %")
 		else
 			print("No command configured for filetype: " .. ft)
 		end
